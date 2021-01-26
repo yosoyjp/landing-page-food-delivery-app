@@ -1,0 +1,257 @@
+:root{
+    --color-text-black: #252B42;
+    --color-text-gray: #737373;
+    --color-white: #ffffff;
+    --color-accent: #FA4A0C;
+    --color-grey-divider: #E4E4E4;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #FAFAFA;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    width: 236px;
+    height: 68px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 16px 0px;
+    line-height: 36px;
+    border-radius: 30px;
+    letter-spacing: 0.1px;
+    transition: all 200ms ease-in;
+    box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.07);
+}
+
+button.accent, button.outline:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+button.accent:hover, button.outline {
+    color: var(--color-accent);
+    background-color: transparent;
+    border: 2px solid var(--color-accent);
+}
+
+.portrait {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.portrait > h5.caption {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    letter-spacing: 0.1px;
+    color: var(--color-text-gray);
+}
+
+.title-portrait {
+    margin-top: 10px;
+    margin-bottom: 17px;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 2.25em;
+    line-height: 42px;
+    letter-spacing: 0.2px;
+    color: var(--color-text-black);
+}
+
+h3.subtitle_portrait {
+    margin: 0;
+    padding: 25px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 38px;
+
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: var(--color-text-gray);
+}
+
+.container__buttons--portrait{
+    width: 80vw;
+    height: 180px;
+    /*background-color: green;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+#screens_together {
+    width: 100%;
+    height: fit-content;
+}
+img.together_screens {
+    width: 100%;
+    height: auto;
+    margin-left: -35px;
+    object-fit: contain;
+}
+
+.title_step_by_step--section{
+    display: flex;
+    text-align: center;
+    flex-direction: column-reverse;
+}
+
+.title_step_by_step--section hr{
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey-divider);
+    border: none;
+}
+.title_step_by_step--section h2{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+}
+article.step {
+    min-height: 100vh;
+}
+.step_info{
+    text-align: center;
+    padding: 0px 15px;
+}
+.step_info .caption {
+    color: var(--color-accent);
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 46px;
+}
+.step_info .title_step {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    margin: 0px;
+}
+.step_info .description_step {
+    margin-top: 35px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+}
+article.step .container_image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article.step .container_image > img{
+    
+    object-fit: contain;
+    filter: drop-shadow(50px 30px 150px rgba(46, 4, 4, 0.15));
+}
+
+/**
+*  Desktop
+**/
+@media (min-width: 900px){
+    .portrait{
+        background-image: url(../assets/images/bg_home.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .portrait button,
+    .portrait > h5.caption,
+    .title-portrait,
+    h3.subtitle_portrait {
+        color: var(--color-white);
+        border-color: var(--color-white);
+    }
+    .portrait > h5.caption {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .title-portrait{
+        padding: 0 60px;
+        font-size: 58px;
+        line-height: 80px;
+    }
+    .container__buttons--portrait{
+        flex-direction: row;
+        justify-content: center;
+        height: 90px;
+    }
+    .container__buttons--portrait > button {
+        margin: 0 15px;
+    }
+
+    #screens_together {
+        margin-top: -310px;
+        display: flex;
+        justify-content: center;
+    }
+    img.together_screens {
+        width: 41%;
+    }
+    .title_step_by_step--section{
+        flex-direction: column;
+    }
+    .title_step_by_step--section hr{
+        width: 70%;
+    }
+    .title_step_by_step--section h2{
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 36px;
+    }
+
+    article.step{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .step-left{
+        flex-direction: row-reverse;
+    }
+    .step-left .step_info *{
+        text-align: left;
+        padding-right: 100px;
+    }
+    .step-right .step_info *{
+        text-align: right;
+        padding-left: 100px;
+    }
+    article.step > div{
+        width: 50vw;
+    }
+    article.step .container_image{
+        width: 50vw;
+    }
+    article.step .container_image img {
+        height: 100%;
+        width: auto;
+    }
+}
+
+/**
+*  Desktop large
+**/
+@media (min-width: 1400px) {
+    #screens_together {
+        margin-top: -520px;
+    }
+    img.together_screens {
+        width: 55%;
+    }
+}
