@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link async href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>Food Delivery App</title>
 </head>
 <body>
@@ -19,7 +19,21 @@
             <a href="#" class="brand">
                 <img src="assets/images/icon.png" alt="Food App">
             </a>
-            <div role="button" class="toggle-menu" >
+            <ul id="list-options-header" >
+                <li class="active" >
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/faq">Faq</a>
+                </li>
+                <li>
+                    <a href="/terms">Terms and policies</a>
+                </li>
+                <li>
+                    <a href="/#contact">Contact</a>
+                </li>
+            </ul>
+            <div role="button" name="button-toggle-menu" class="toggle-menu" >
                 <i  class="animated fas fa-bars"></i>
                 <i  class="animated none fas fa-times"></i>
             </div>
