@@ -5,6 +5,8 @@
     --color-bg: #FAFAFA;
     --color-accent: #FA4A0C;
     --color-grey-divider: #E4E4E4;
+    --color-bg-blue: #252B42;
+    --color-text-gray-so: #BDBDBD;
 }
 
 * {
@@ -60,6 +62,12 @@ button.accent:hover, button.outline {
     color: var(--color-accent);
     background-color: transparent;
     border: 2px solid var(--color-accent);
+}
+
+button.outline_white{
+    color: var(--color-white);
+    background-color: transparent;
+    border: 2px solid var(--color-white);
 }
 
 header {
@@ -264,6 +272,53 @@ article.step .container_image > img{
     color: var(--color-accent);
 }
 
+#download_section{
+    width: 100%;
+    padding: 40px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    background-color: var(--color-bg-blue);
+}
+
+#download_section h2{
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 57px;
+    font-style: normal;
+    text-align: center;
+    color: var(--color-white);
+}
+
+#download_section p{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: var(--color-text-gray-so);
+}
+
+.container__buttons--download_section {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;    
+}
+
+.container__buttons--download_section button {
+    padding: 18px 31px;
+    min-width: 137px;
+    width: auto;
+    font-size: 16px;
+    border-radius: 10px;
+
+}
+
 /**
 *  Desktop
 **/
@@ -344,6 +399,27 @@ article.step .container_image > img{
     }
     article.step .container_image img {
         width: 350px;
+    }
+
+    #download_section {
+        height: 516px;
+        background-image: url(../assets/images/bg_home_section.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        justify-content: center;
+    }
+
+    #download_section p {
+        color: var(--color-white);
+    }
+
+    .container__buttons--download_section {
+        justify-content: center;
+    }
+
+    .container__buttons--download_section button {
+        margin: 0 15px;
     }
 }
 
